@@ -26,8 +26,7 @@ class ClientTest(unittest.TestCase):
   def test_getRatio(self):
       test_prices = ((120.48,0),)
       for i in test_prices:
-          with self.assertRaises(ZeroDivisionError):
-              getRatio(i[0], i[1])
+          self.assertEqual(getRatio(i[0],i[1]), None)
 
 
 
